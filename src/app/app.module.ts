@@ -7,10 +7,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AdddataComponent } from './adddata/adddata.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { ViewalldataComponent } from './viewalldata/viewalldata.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes:Routes=[
   {
     path:"",component:AdddataComponent
+  },
+  {
+    path:"viewdata",component:ViewalldataComponent
   }
 ]
 
@@ -18,13 +23,15 @@ const appRoutes:Routes=[
   declarations: [
     AppComponent,
     NavbarComponent,
-    AdddataComponent
+    AdddataComponent,
+    ViewalldataComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

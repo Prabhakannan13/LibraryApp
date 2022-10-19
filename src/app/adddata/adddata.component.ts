@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-adddata',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdddataComponent implements OnInit {
 
-  constructor() { }
+  constructor(private myapi:ApiService) { }
 
   bookname=""
   description=""
@@ -20,6 +21,11 @@ export class AdddataComponent implements OnInit {
       "author":this.author
     }
     console.log(data)
+    this.myapi.addData(data).subscribe(
+      (data)=>{
+        alert("Data added successfully")
+      }
+    )
     
   }
 
