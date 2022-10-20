@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Search Book</label>
+                    <input type="text" class="form-control" name="bookname" [(ngModel)]="bookname">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button class="btn btn-success" (click)="readValues()">Search</button>
+                </div>
+                <div *ngFor="let i of data">
+                    <div class="row">
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col xl-12 col-xxl-12">
+                            <label for="" class="form-label">Book Name</label>
+                            <input type="text" class="form-control" value="{{i.bookname}}">
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col xl-12 col-xxl-12">
+                            <label for="" class="form-label">Description</label>
+                            <input type="text" class="form-control" value="{{i.description}}">
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col xl-12 col-xxl-12">
+                            <label for="" class="form-label">Author</label>
+                            <input type="text" class="form-control" value="{{i.author}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

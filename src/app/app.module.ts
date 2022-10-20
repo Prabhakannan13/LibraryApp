@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ViewalldataComponent } from './viewalldata/viewalldata.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchbookComponent } from './searchbook/searchbook.component';
 
 const appRoutes:Routes=[
   {
@@ -16,6 +17,9 @@ const appRoutes:Routes=[
   },
   {
     path:"viewdata",component:ViewalldataComponent
+  },
+  {
+    path:"searchdata",component:SearchbookComponent
   }
 ]
 
@@ -24,7 +28,8 @@ const appRoutes:Routes=[
     AppComponent,
     NavbarComponent,
     AdddataComponent,
-    ViewalldataComponent
+    ViewalldataComponent,
+    SearchbookComponent
   ],
   imports: [
     BrowserModule,
