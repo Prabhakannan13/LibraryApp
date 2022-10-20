@@ -19,7 +19,17 @@ export class ViewalldataComponent implements OnInit {
     )
    }
 
-
+deleteData=(id:any)=>{
+  let data={
+    "id":id
+  }
+  this.myapi.deleteData(data).subscribe(
+    (resp)=>{
+      alert("Deleted")
+    }
+  )
+  this.fetchData()
+}
 viewData:any=[]
   ngOnInit(): void {
   }
