@@ -25,6 +25,14 @@ readValues=()=>{
   )
 }
 
+updateBook=()=>{
+  this.myapi.updateBook(this.data[0]).subscribe(
+    (res)=>{
+      alert("Updated successfully")
+    }
+  )
+}
+
 data:any=[]
 
   ngOnInit(): void {
